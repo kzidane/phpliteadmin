@@ -11,5 +11,5 @@ before_deploy:
 
 deploy:
   provider: script
-  script: .travis/deb64.sh
+  script: .travis/deb64
   skip_cleanup: true
