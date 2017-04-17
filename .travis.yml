@@ -1,9 +1,10 @@
-before_install: gem install fpm
+before_install:
+  - gem install fpm
+  - pip install awscli
 
 script: make deb
 
 before_deploy:
-  - pip install awscli
   - aws s3 sync s3://mirror.cs50.net/kide50/ .travis/kide50/
 
 deploy:
