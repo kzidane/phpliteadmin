@@ -1,4 +1,4 @@
 .*
 !.gitignore
+!.travis.yml
 *.deb
-opt/cs50/bin/phpliteadmin

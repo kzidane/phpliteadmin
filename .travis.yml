@@ -1,0 +1,3 @@
+before_install: gem install fpm
+
+script: make deb
