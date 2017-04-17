@@ -13,3 +13,5 @@ gzip -9c Packages > Packages.gz
 apt-ftparchive release . > Release
 gpg --passphrase $GPG_PASSPHRASE --yes --clearsign -o InRelease Release
 gpg --passphrase $GPG_PASSPHRASE --yes -abs -o Release.gpg Release
+
+aws s3 sync $TRAVIS_BUILD_DIR/.travis/kide50/ s3://mirror.cs50.net/kide50/
