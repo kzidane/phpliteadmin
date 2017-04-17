@@ -8,7 +8,7 @@ script: make deb
 
 before_deploy:
   - aws s3 sync s3://mirror.cs50.net/kide50/ .travis/kide50/
-  - echo $GPG_SECRET | gpg --import
+  - echo -e $GPG_SECRET | gpg --import
 deploy:
   provider: script
   script: .travis/deb64
